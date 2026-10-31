@@ -1,0 +1,168 @@
+@use '../../shared/styles/abstracts/colors' as color;
+
+.participant-card {
+  background: color.$neutral-0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px color.$shadow;
+}
+
+.participant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.participant-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: color.$neutral-900;
+  }
+}
+
+.participant-role {
+  font-size: 12px;
+  color: color.$neutral-600;
+}
+
+.participant-status {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: color.$green-600;
+  background: color.$green-100;
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  &.pending {
+    color: color.$orange-600;
+    background: color.$orange-100;
+  }
+}
+
+.dish-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dish-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid color.$neutral-200;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.dish-image {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.dish-details {
+  flex: 1;
+  min-width: 0;
+
+  h4 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: color.$neutral-900;
+  }
+}
+
+.dish-weight {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: color.$neutral-400;
+}
+
+.dish-quantity {
+  flex-shrink: 0;
+  font-size: 14px;
+  color: color.$neutral-600;
+}
+
+.dish-price {
+  flex-shrink: 0;
+  min-width: 65px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: color.$neutral-900;
+}
+
+.participant-subtotal {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  padding-top: 16px;
+  border-top: 1px solid color.$neutral-200;
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    color: color.$neutral-600;
+  }
+
+  strong {
+    min-width: 70px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 600;
+    color: color.$neutral-900;
+  }
+}
+
+@media (max-width: 600px) {
+  .participant-card {
+    padding: 14px;
+  }
+
+  .participant-header {
+    align-items: flex-start;
+  }
+
+  .participant-status {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .dish-item {
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .dish-image {
+    width: 52px;
+    height: 52px;
+  }
+
+  .dish-price {
+    min-width: auto;
+  }
+}
+.empty-order {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: color.$neutral-400;
+}
